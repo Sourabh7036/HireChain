@@ -3,6 +3,7 @@ import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import CandidateForm from './components/CandidateForm';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
             />
 
             {/* Optional: fallback route or default redirect */}
-            <Route path="*" element={<Login />} />
+             <Route path="/login" element={<Login />} />
+             <Route path="/candidate" element={<CandidateForm />} />
           </Routes>
         </div>
       </Router>

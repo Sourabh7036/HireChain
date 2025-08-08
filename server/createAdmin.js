@@ -7,7 +7,6 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.error("Connection error:", err));
 
 
-
 async function createInitialAdmin() {
     try{
         const existingAdmin = await User.findOne({role : "admin"});
@@ -29,5 +28,5 @@ async function createInitialAdmin() {
         mongoose.disconnect();
     }
 }
-
+ 
 createInitialAdmin();
